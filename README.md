@@ -38,9 +38,9 @@ Logging in from Thunderbird or mutt (and others) remotely
 
 Let's say you want to access your mail with Thunderbird or mutt or another email program. For my domain, the server information will be as follows:
 
-    SMTP server: mail.lukesmith.xyz
+    SMTP server: mail.mywebsite.com
     SMTP port: 587
-    IMAP server: mail.lukesmith.xyz
+    IMAP server: mail.mywebsite.com
     IMAP port: 993
 
 
