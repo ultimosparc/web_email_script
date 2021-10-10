@@ -1,5 +1,5 @@
 # web_email_script
-Based on the github project https://github.com/LukeSmithxyz/emailwiz I have delveloped a overall installation script which installs a nginx server as webserver and postfix as email server on any Debian or Ubuntu maschine within few minutes. In addition to the core features by emailwiz
+Based on the github project https://github.com/LukeSmithxyz/emailwiz I have developed a overall installation script which installs a nginx server as webserver and postfix as email server on any Debian or Ubuntu maschine within few minutes. In addition to the core features by emailwiz
 
     - **Postfix** to send and receive mail.
     - **Dovecot** to get mail to your email client (mutt, Thunderbird, etc.).
