@@ -9,17 +9,17 @@ Based on the github project https://github.com/LukeSmithxyz/emailwiz I have delv
 
 the script has the following features: 
     
-    install automatically all software which you need
-    setup automatically nginx as webserver
-    validate your new domain and customize your webserver with all domains and subdomains
-    create the adminstrator mail account and install automatically all TSL certificates and cronjobs
-    create DNS records for your registrar
+    - It installs automatically all software which you need. 
+    - It setups automatically nginx as webserver. 
+    - It validates your new domain and customizes your webserver with all domains and subdomains. 
+    - It creates the adminstrator mail account and installs automatically all TSL certificates and cronjobs. 
+    - It creates DNS records for your registrar. 
 
 Remarks:
 
-    You need a Debian or Ubuntu server. 
-    The IP of your maschine is connected with your DNS address
-    For any issue with the email server, check out https://github.com/LukeSmithxyz/emailwiz
+    - You need a Debian or Ubuntu server. 
+    - The IP of your maschine is connected with your DNS address.
+    - For any issue with the email server, check out https://github.com/LukeSmithxyz/emailwiz. 
 
 
 
