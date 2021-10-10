@@ -94,6 +94,9 @@ intial_user_account_setup(){
 	fi
 }
 email_service_setup(){
+	
+	#  >> This code within this function belongs to the GitHub project https://github.com/LukeSmithxyz/emailwiz << 
+	
 	echo "Installing programs..."
 	apt install -y postfix dovecot-imapd dovecot-sieve opendkim spamassassin spamc
 	# Check if OpenDKIM is installed and install it if not.
