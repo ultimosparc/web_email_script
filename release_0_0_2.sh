@@ -401,6 +401,10 @@ percent=0
 DATA=$(grep -w 80 /etc/services)
 if [ $? -eq 0 ]
 then
+	apt update -q >> /dev/null 2>&1
+        apt install -y -q boxes >> /dev/null 2>&1
+        apt install -y -q whiptail >> /dev/null 2>&1
+
 	#program start
 	echo -e "		SAT HEROS\n Installation Script of Web and Email Server" | boxes -d cc
 	if (whiptail --title "SAT HEROS: Installation of Web and Email Server" --yesno "Do you want to start?" 8 78); then
