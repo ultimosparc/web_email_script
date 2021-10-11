@@ -46,6 +46,7 @@ web_service_setup(){
 }
 
 enviroment_preparation(){
+	systemctl stop apache2
 	apt remove -y ca-certificates
 	apt install -y ca-certificates
 	apt update -y  
