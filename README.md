@@ -12,7 +12,7 @@ the script has the following features:
     - It installs automatically all software which you need. 
     - It setups automatically nginx as webserver. 
     - It validates your new domain and customizes your webserver with all domains and subdomains. 
-    - It creates the adminstrator mail account and installs automatically all TSL certificates and cronjobs. 
+    - It creates the first mail account and installs all TSL certificates and cronjobs. 
     - It creates DNS records for your registrar. 
 
 Remarks:
