@@ -17,6 +17,7 @@ the script has the following features:
 
 Remarks:
 
+    - Diactive any webservice with systemctl stop <service name> that use port 80 
     - You need a Debian or Ubuntu server. 
     - The IP of your maschine is connected with your DNS address.
     - For any issue with the email server, check out https://github.com/LukeSmithxyz/emailwiz. 
