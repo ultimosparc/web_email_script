@@ -14,6 +14,7 @@ the script has the following features:
     - It validates your new domain and customizes your webserver with all domains and subdomains. 
     - It creates the first mail account and installs all TSL certificates and cronjobs. 
     - It creates DNS records for your registrar. 
+    - It verifies the firewall settings and adjusts the ports in case of the ports are closed. 
 
 Remarks:
 
