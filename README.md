@@ -12,16 +12,15 @@ the script has the following features:
     - It installs automatically all software which you need. 
     - It setups automatically nginx as webserver. 
     - It validates your new domain and customizes your webserver with all domains and subdomains. 
-    - It creates the first mail account and installs all TSL certificates and cronjobs. 
-    - It creates DNS records for your registrar. 
-    - It verifies the firewall settings and adjusts the ports in case of the ports are closed. 
+    - It creates the first mail account and installs all TSL certificates and cronjobs.  
+    - It verifies the firewall settings and adjusts the ports if necessary. 
 
 Remarks:
 
-    - Diactivate any webservice with systemctl stop <service name> that use port 80 
+    - Disable any webservice with systemctl stop <service name> that use port 80 
     - You need a Debian or Ubuntu server. 
     - The IP of your maschine is connected with your DNS address.
-    - For any issue with the email server, check out https://github.com/LukeSmithxyz/emailwiz. 
+    - For any issue with the email server, check out the remarks of https://github.com/LukeSmithxyz/emailwiz. 
 
 
 
