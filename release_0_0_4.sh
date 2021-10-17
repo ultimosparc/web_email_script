@@ -395,6 +395,28 @@ terminal_output_summery(){
 	item_echo "First email account was created: $1"
 	item_echo "DNS records of email server: ~/dns_emailwizard"	
 }
+verify_ports(){
+	declare -a arr=("smtpd" "pop3" "pop3s" "imap2" "imaps");
+	declare -a arr2=("25" "110" "995" "143" "993");
+
+	for i in {0..4}
+	do
+		service="${arr[$i]}"
+		port="${arr2[$i]}"
+		iptables -L | grep $service >> /dev/null
+		if [ $? -eq 1 ]; then
+			echo "Port $port is not open"
+			echo "Opening up port $port ..."
+			iptables -A INPUT -p tcp --dport $port -j ACCEPT
+			iptables -L | grep $service >> /dev/null
+			if [ $? -eq 1 ]; then
+				echo "Error: port $port is still closed, script aborted, verify the system settings and try it again" | boxes -d peek
+				exit 1
+			fi
+		fi
+		echo "Port $port is open"
+	done
+}
 
 
 run_script(){
@@ -438,6 +460,7 @@ then
 	echo $EMAIL_USER
 	certificates_setup $DOMAIN $EMAIL_USER
 	renew_crontab
+	verify_ports
 	terminal_output_summery "$EMAIL_USER@$DOMAIN" | boxes -d javadoc
 else
 	echo "Port 80 is not open, open port for this session at first"
