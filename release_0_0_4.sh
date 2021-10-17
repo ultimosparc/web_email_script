@@ -10,7 +10,7 @@ FAILURE="Error: domain name format is not correct"
 ed=`tput setaf 1`
 green=`tput setaf 2`
 reset=`tput sgr0`
-programs="nginx certbot python3-certbot-nginx boxes curl"
+programs="nginx certbot python3-certbot-nginx boxes curl iptables"
 ##--------Functions--------##
 domain_validation(){
 	case "$1" in
