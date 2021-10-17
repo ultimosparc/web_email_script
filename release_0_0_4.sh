@@ -396,7 +396,7 @@ terminal_output_summery(){
 	item_echo "DNS records of email server: ~/dns_emailwizard"	
 }
 verify_ports(){
-	declare -a arr=("smtpd" "pop3" "pop3s" "imap2" "imaps");
+	declare -a arr=("smtp" "pop3" "pop3s" "imap2" "imaps");
 	declare -a arr2=("25" "110" "995" "143" "993");
 
 	for i in {0..4}
@@ -404,12 +404,12 @@ verify_ports(){
 		service="${arr[$i]}"
 		port="${arr2[$i]}"
 		iptables -L | grep $service >> /dev/null
-		if [ $? -eq 1 ]; then
+		if [ $? == 1 ]; then
 			echo "Port $port is not open"
 			echo "Opening up port $port ..."
 			iptables -A INPUT -p tcp --dport $port -j ACCEPT
 			iptables -L | grep $service >> /dev/null
-			if [ $? -eq 1 ]; then
+			if [ $? == 1 ]; then
 				echo "Error: port $port is still closed, script aborted, verify the system settings and try it again" | boxes -d peek
 				exit 1
 			fi
