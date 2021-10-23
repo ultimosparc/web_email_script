@@ -3,7 +3,7 @@
 DOMAIN=
 EMAIL_USER=
 NGINX_LOC="/etc/nginx/sites-available"
-NGINX_CUSTOMIZED_CONFIG_FILE_LOCATION="customized_default"
+NGINX_CUSTOMIZED_CONFIG_FILE_LOCATION="default"
 PASSWORD=
 SUCCESS="Domain name is ok"
 FAILURE="Error: domain name format is not correct"
@@ -25,7 +25,8 @@ domain_validation(){
 
 web_service_setup(){
 	DOMAIN="$1"
-	grep -v '#' $NGINX_LOC/default  > $NGINX_LOC/$NGINX_CUSTOMIZED_CONFIG_FILE_LOCATION
+	mv $NGINX_LOC/default $NGINX_LOC/old_default
+	grep -v '#' $NGINX_LOC/old_default  > $NGINX_LOC/default
 	if [ $? -eq 1 ]
 	then 
 		echo "Error: Not all # were removed" | boxes -d peek
