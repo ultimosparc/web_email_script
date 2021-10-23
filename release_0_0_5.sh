@@ -450,11 +450,12 @@ then
 	#read adminstrator name (DNS name) and assign it to the INPUT variable 
 	input_box "user"
 	PASSWORD=$(whiptail --passwordbox "please enter your secret password" 8 78 --title "password dialog" 3>&1 1>&2 2>&3)
-	exitstatus=$?
-	if [ $exitstatus == 0 ]; then
-		echo "User selected Ok and entered Password"
+	PASSWORD2=$(whiptail --passwordbox "please enter your secret password again" 8 78 --title "password dialog" 3>&1 1>&2 2>&3)
+	if [ $PASSWORD == $PASSWORD2 ]; then
+		echo "Password ok"
 	else
-		echo "User selected Cancel."
+		echo "Password doesn't match"
+		exit
 	fi
 	intial_user_account_setup $EMAIL_USER $PASSWORD
 	echo $DOMAIN
