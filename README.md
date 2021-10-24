@@ -21,6 +21,10 @@ Remarks:
     - You need a Debian or Ubuntu server. 
     - The IP of your maschine is connected with your DNS address.
     - For any issue with the email server, check out the remarks of https://github.com/LukeSmithxyz/emailwiz. 
+   
+ 
 
+On the website introDNS.com you may verify your DNS settings of the email server. If everything works, it should look like
 
+![2021-10-24 12_38_58-Window](https://user-images.githubusercontent.com/15387251/138590404-4b6aac4b-30ad-484f-b39a-31ee8b320dcb.png)
 
